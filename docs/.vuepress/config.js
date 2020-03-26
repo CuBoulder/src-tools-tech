@@ -1,13 +1,48 @@
 module.exports = {
     title: 'SRC Web Team Tools & Tech',
     description: 'Documentation on all our technologies we use',
-    base: '/src-tools-tech/',
+    // base: '/src-tools-tech/',
     themeConfig:{
+        nav: [
+            { text: 'Home', link: '/' },
+            { text: ' CU Boulder Github', link: 'https://github.com/CuBoulder' }
+        ],
+        repo: 'CuBoulder/src-tools-tech',
+        repoLabel: 'Contribute!',
+        // if your docs are not at the root of the repo:
+        docsDir: 'docs',
+        // if your docs are in a specific branch (defaults to 'master'):
+        docsBranch: 'master',
+        editLinks: true,
+        editLinkText: 'Edit this page!',
+        logo: '/cu-logo.png',
+        searchPlaceholder: 'Search...',
         sidebar: [
             '/',
             '/html',
             '/css',
-            '/javascript'
+            '/javascript',
+            '/browser',
+            '/http',
+            '/drupal8',
+            '/wordpress',
+            '/passwords',
+            '/devops',
+            '/caching',
+            '/databases',
+            '/versioncontrol',
+            '/php',
+            '/python',
+            '/webservers',
+            '/cloudhosting',
+            '/pantheon',
+            '/containers',
+            '/lando',
+            '/ide',
+            '/packagemanagers',
+            '/cli',
+            '/logging',
+            '/resources'
         ]
     }
 }
