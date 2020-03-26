@@ -10,8 +10,13 @@ Make sure Node and npm are installed first
 ## To Develop
 
     npm run docs:dev
+### IMPORTANT!
+Sice the site is being served from a respositroy, the base URL is not '/' but '/src-tools-tech'. In the config.js file, you will have to comment out the **base** property for local dev to work. When rebuilding, uncomment the line before running the deploy script.
 
 ## To Edit
+### From the Github Web UI
+You can visit the stie and at the bottom of the page, you can click on the **Edit this Page!** link. It will bring you to the markdown file and you can make changes and commit them. However, the site will have to rebuilt.
+
 ### Adding a page
 Go into the **docs** directory and do
 <br/>
@@ -26,8 +31,8 @@ Add the content to the file in Markdown. This site makes writing easier:
 ### Adding a Link to the Sidebar
 To make your page show up in the side bar, you'll have to add the route to the **docs/.vuepress/config.js** file. Add your page name (name of the markdown file) to the sidebar array.
 
-## To Build -WIP-
-Once you're done with your page, you can re-build the site. The site is being served from the **gh-pages** branch. This branch (master) is for adding content. There is a shell script that will build the site and push changes to the gh-pages branch. You may have to change permissions on the script to execute.
+## To Build
+Once you're done with your page, you can re-build the site. The build lives on the **gh-pages** branch. There is a shell script that will build the site and push changes that branch. Before running the script, make sure the **base** property is uncommented in the **config.js** file. Also, you will have to add an ssh key to your github account. Instructions to do that are [here](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
 
     sudo chmod u+x deploy.sh
     ./deploy.sh
