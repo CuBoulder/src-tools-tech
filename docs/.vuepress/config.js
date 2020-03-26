@@ -1,7 +1,12 @@
 module.exports = {
     title: 'SRC Web Team Tools & Tech',
     description: 'Documentation on all our technologies we use',
-    // base: '/src-tools-tech/',
+    head:[
+        ['link', { rel: "shortcut icon", href: "/favicon.ico"}]
+    ],
+    // comment line below for local
+    // UNCOMMENT LINE BEFORE RUNNING BUILD SCRIPT!!!
+    base: '/src-tools-tech/',
     themeConfig:{
         nav: [
             { text: 'Home', link: '/' },
