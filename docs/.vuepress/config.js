@@ -4,9 +4,6 @@ module.exports = {
     head:[
         ['link', { rel: "shortcut icon", href: "/favicon.ico"}]
     ],
-    // comment line below for local
-    // UNCOMMENT LINE BEFORE RUNNING BUILD SCRIPT!!!
-    base: '/src-tools-tech/',
     themeConfig:{
         nav: [
             { text: 'Home', link: '/' },
