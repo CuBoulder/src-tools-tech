@@ -15,9 +15,7 @@ overview for a topic, resources for further learning, or tutorials for usage/ins
 
 ## How to Edit
 
-The content is generated with markdown. You can edit the files locally, or through the GitHub Web UI. Regardless
-of how you choose to edit, the site will have to be rebuilt with the deploy script to reflect changes. This means you'll have to clone the repo
-and install dependencies with npm. If you would rather just make changes, but not rebuild the site, you can just use the GitHub Web UI.
+The content is generated with markdown. You can edit the files locally, or through the GitHub Web UI.
 
 ### Local Development
 
@@ -30,15 +28,12 @@ git clone https://github.com/CuBoulder/src-tools-tech.git
 ```
 npm install
 ```
-::: danger
-You will have to comment out the **base** property in the **docs/.vuepress/config.js** file for local development. Before running the deploy script,
-uncomment the line. 
-:::
+
 4. Start the Development Server
 ```
 npm run docs:dev
 ```
-5. Adding a new Page
+5. Adding a new Page:
 ```
 // Add a file to the docs directory
 touch <pagename>.md
@@ -49,21 +44,11 @@ sidebar: [
     '/pagename'
 ]
 ```
-The name of the link in the sidebar will be the Heading 1 (#) name of the markdown file. Any sub-links on the sidebar are the Heading 2 (##) names. A good 
-way to write markdown is to use [Stack Edit](https://stackedit.io/)
+- The name of the link in the sidebar will be the Heading 1 (#) name of the markdown file. 
+- Any sub-links on the sidebar are the Heading 2 (##) names. 
+- A good way to write markdown is to use [Stack Edit](https://stackedit.io/)
 
-5. Commit and Push your changes.
-
-6. Run the deploy script. This script builds the site and pushes the build to the **gh-pages** branch.
-
-::: warning
-Make sure you have an SSH Key connected to your Github Account before running the deploy script. [Add a key](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
-:::
-
-```
-sudo chmod u+x deploy.sh    # change permissions to execute 
-./deploy.sh
-```
+5. Commit and Push your changes. Netlify will automatically rebuild and deploy the site. 
 
 ### Edit with the GitHub Web UI
 
